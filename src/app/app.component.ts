@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Preben';
-  player = ''; 
+  player= '';  
+
+  SaveName() {
+    this.player= this.player;
+    console.log(this.player)
+  }
+  constructor()
+{
+
+}  
 }
