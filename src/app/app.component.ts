@@ -11,6 +11,8 @@ export class AppComponent  {
   // En string som lige nu er tom, men som lytter på hvad brugeren taster i inputfeltet
   input= '';  
 
+selected=0;
+correct=false;
   SaveName() {
     //Navnet sættes til at være ligemed det som brugeren taster ind i inputfeltet.
     this.name= this.input;
@@ -19,6 +21,22 @@ export class AppComponent  {
     //Den sættes tom fordi det ønskes, at det som står i inputfeltet bliver slettet.
     this.input="";
   }
+
+setSelected(select){
+  this.selected=select;
+  console.log(this.selected);
+}
+submit(){
+if(this.selected=== this.answers()) {
+this.correct=true;
+}
+
+
+
+}
+answers(){
+  return 4;
+}
   constructor()
 {
 

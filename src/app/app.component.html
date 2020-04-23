@@ -7,7 +7,10 @@
   <input type="text" id="name" [(ngModel)]="input" name="name"><br>
   <button type="button" (click)="SaveName()">Sæt navn</button>
 </form>
+<div *ngIf="correct" >
+rigtigt!!!
 
+</div>
 <div class="sporgsmaal">
 <p>
   The princess...
@@ -16,16 +19,16 @@
 </div>
 
 <div class="radio">
-<form>
-  <input type="radio" id="and the horse" name="spørgsmål 1" value="0">
+<form >
+  <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="and the horse">and the horse</label><br>
-  <input type="radio" id="female" name="spørgsmål 1" value="0">
+  <input type="radio" value="2" (click)="setSelected(2)">
   <label for="female">and the shoe</label><br>
-  <input type="radio" id="other" name="spørgsmål 1" value="0">
+  <input type="radio"  value="3"(click)="setSelected(3)">
   <label for="other">who cried wolf</label><br>
-  <input type="radio" id="other" name="spørgsmål 1" value="0">
+  <input type="radio" value="4"(click)="setSelected(4)">
   <label for="other">and the frog</label>
-  <p><button type="button" (click)="$2">Next</button></p>
+  <p><button (click)="submit()">Next</button></p>
 </form>
 </div>
 
