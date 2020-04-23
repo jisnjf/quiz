@@ -1,13 +1,10 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-
 
 <!-- Navne boks (skal gemmes i en variabel der kan kaldes til slut) -->
 <form>
   <label for="name">Indtast Navn</label><br>
-  <input type="text" id="name" name="name"><br>
+  <!-- ved at bruge "[(ngModel)]" fortæller man at ens variabel, I dette tilfælde "input", lytter til hvad der bliver tastet i inputfeltet. På den måde kan vi fortælle vores logik hvad navnet er på brugeren. Overordnet altså hvordan vi gemmer hvad der er tastet i brugerfladen til vores logik -->
+  <input type="text" id="name" [(ngModel)]="input" name="name"><br>
   <button type="button" (click)="SaveName()">Sæt navn</button>
 </form>
 
