@@ -26,16 +26,22 @@ setSelected(select){
   this.selected=select;
   console.log(this.selected);
 }
-submit(){
-if(this.selected=== this.answers()) {
+submit(question:number){
+
+console.log(this.answers().indexOf(question));
+
+if(this.selected=== this.answers()[question]) {
 this.correct=true;
 }
-
-
-
 }
+
+next(){
+  
+}
+
 answers(){
-  return 4;
+
+  return [4,1,4,3,2];
 }
   constructor()
 {

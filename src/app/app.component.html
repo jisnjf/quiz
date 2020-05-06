@@ -13,7 +13,7 @@ rigtigt!!!
 </div>
 <div class="sporgsmaal">
 <p>
-  The princess...
+  1. The Princess and...
 </p>
 <!-- Svar muligheder -->
 </div>
@@ -21,16 +21,94 @@ rigtigt!!!
 <div class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
-  <label for="and the horse">and the horse</label><br>
+  <label for="wrong">the Horse</label><br>
   <input type="radio" value="2" (click)="setSelected(2)">
-  <label for="female">and the shoe</label><br>
+  <label for="wrong">the Shoe</label><br>
   <input type="radio"  value="3"(click)="setSelected(3)">
-  <label for="other">who cried wolf</label><br>
+  <label for="wrong">who cried Wolf</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
-  <label for="other">and the frog</label>
-  <p><button (click)="submit()">Next</button></p>
+  <label for="right">the Frog</label>
+
+  <p>
+    <button (click)="submit(1)"> answer</button>
+    <button (click)="next()">Next</button>
+    </p>
 </form>
 </div>
-
-
+<div class="sporgsmaal">
+<p>
+  2. The Shawshank...
+</p>
+<!-- Svar muligheder -->
+</div>
+<div class="radio">
+<form >
+  <input type="radio" value="1" (click)="setSelected(1)" >
+  <label for="right">Redemption</label><br>
+  <input type="radio" value="2" (click)="setSelected(2)">
+  <label for="wrong">Retribution</label><br>
+  <input type="radio"  value="3"(click)="setSelected(3)">
+  <label for="wrong">Vindication</label><br>
+  <input type="radio" value="4"(click)="setSelected(4)">
+  <label for="wrong">Reclamation</label>
+  <p><button (click)="submit(2)">Next</button></p>
+</form>
+</div>
+<div class="sporgsmaal">
+<p>
+  3. The Good, the Bad and...
+</p>
+<!-- Svar muligheder -->
+</div>
+<div class="radio">
+<form >
+  <input type="radio" value="1" (click)="setSelected(1)" >
+  <label for="wrong">the Stupid</label><br>
+  <input type="radio" value="2" (click)="setSelected(2)">
+  <label for="wrong">the Dog</label><br>
+  <input type="radio"  value="3"(click)="setSelected(3)">
+  <label for="wrong">the Beautiful</label><br>
+  <input type="radio" value="4"(click)="setSelected(4)">
+  <label for="right">the Ugly</label>
+  <p><button (click)="submit(3)">Next</button></p>
+</form>
+</div>
+<div class="sporgsmaal">
+<p>
+  4. Fight...
+</p>
+<!-- Svar muligheder -->
+</div>
+<div class="radio">
+<form >
+  <input type="radio" value="1" (click)="setSelected(1)" >
+  <label for="wrong">Song</label><br>
+  <input type="radio" value="2" (click)="setSelected(2)">
+  <label for="wrong">Dance</label><br>
+  <input type="radio"  value="3"(click)="setSelected(3)">
+  <label for="right">Club</label><br>
+  <input type="radio" value="4"(click)="setSelected(4)">
+  <label for="wrong">Bar</label>
+  <p><button (click)="submit(4)">Next</button></p>
+</form>
+</div>
+<div class="sporgsmaal">
+<p>
+  5. Forrest...
+</p>
+<!-- Svar muligheder -->
+</div>
+<div class="radio">
+<form >
+  <input type="radio" value="1" (click)="setSelected(1)" >
+  <label for="wrong">Dump</label><br>
+  <input type="radio" value="2" (click)="setSelected(2)">
+  <label for="right">Gump</label><br>
+  <input type="radio"  value="3"(click)="setSelected(3)">
+  <label for="wrong">Run</label><br>
+  <input type="radio" value="4"(click)="setSelected(4)">
+  <label for="wrong">Rump</label>
+  <p><button (click)="submit(5)">Next</button></p>
+</form>
+</div>
 
