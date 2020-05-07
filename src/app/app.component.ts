@@ -10,9 +10,9 @@ export class AppComponent  {
   name = '';
   // En string som lige nu er tom, men som lytter på hvad brugeren taster i inputfeltet
   input= '';  
-
+questionIndex=1;
 selected=0;
-correct=false;
+correct:boolean;
   SaveName() {
     //Navnet sættes til at være ligemed det som brugeren taster ind i inputfeltet.
     this.name= this.input;
@@ -33,15 +33,19 @@ console.log(this.answers().indexOf(question));
 if(this.selected=== this.answers()[question]) {
 this.correct=true;
 }
+else{
+  this.correct=false;
+}
 }
 
 next(){
-  
+  this.correct=null;
+  this.questionIndex=this.questionIndex+1;
 }
 
 answers(){
 
-  return [4,1,4,3,2];
+  return [0,4,1,4,3,2];
 }
   constructor()
 {

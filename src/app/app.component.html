@@ -7,18 +7,20 @@
   <input type="text" id="name" [(ngModel)]="input" name="name"><br>
   <button type="button" (click)="SaveName()">Sæt navn</button>
 </form>
-<div *ngIf="correct" >
+<div *ngIf="correct ===true" >
 rigtigt!!!
-
 </div>
-<div class="sporgsmaal">
+<div *ngIf="correct ===false"> 
+  forkert!!!
+</div>
+<div *ngIf="questionIndex===1"class="sporgsmaal">
 <p>
   1. The Princess and...
 </p>
 <!-- Svar muligheder -->
 </div>
 
-<div class="radio">
+<div *ngIf="questionIndex===1"class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="wrong">the Horse</label><br>
@@ -30,18 +32,18 @@ rigtigt!!!
   <label for="right">the Frog</label>
 
   <p>
-    <button (click)="submit(1)"> answer</button>
+    <button (click)="submit(1)"> Answer</button>
     <button (click)="next()">Next</button>
     </p>
 </form>
 </div>
-<div class="sporgsmaal">
+<div *ngIf="questionIndex===2"class="sporgsmaal">
 <p>
   2. The Shawshank...
 </p>
 <!-- Svar muligheder -->
 </div>
-<div class="radio">
+<div *ngIf="questionIndex===2"class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="right">Redemption</label><br>
@@ -51,16 +53,19 @@ rigtigt!!!
   <label for="wrong">Vindication</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Reclamation</label>
-  <p><button (click)="submit(2)">Next</button></p>
+  <p>
+    <button (click)="submit(2)"> answer</button>
+    <button (click)="next()">Next</button>
+    </p>
 </form>
 </div>
-<div class="sporgsmaal">
+<div *ngIf="questionIndex===3"class="sporgsmaal">
 <p>
   3. The Good, the Bad and...
 </p>
 <!-- Svar muligheder -->
 </div>
-<div class="radio">
+<div *ngIf="questionIndex===3"class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="wrong">the Stupid</label><br>
@@ -70,16 +75,19 @@ rigtigt!!!
   <label for="wrong">the Beautiful</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="right">the Ugly</label>
-  <p><button (click)="submit(3)">Next</button></p>
+  <p>
+    <button (click)="submit(3)"> answer</button>
+    <button (click)="next()">Next</button>
+    </p>
 </form>
 </div>
-<div class="sporgsmaal">
+<div *ngIf="questionIndex===4"class="sporgsmaal">
 <p>
   4. Fight...
 </p>
 <!-- Svar muligheder -->
 </div>
-<div class="radio">
+<div *ngIf="questionIndex===4"class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="wrong">Song</label><br>
@@ -89,16 +97,19 @@ rigtigt!!!
   <label for="right">Club</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Bar</label>
-  <p><button (click)="submit(4)">Next</button></p>
+  <p>
+    <button (click)="submit(4)"> answer</button>
+    <button (click)="next()">Next</button>
+    </p>
 </form>
 </div>
-<div class="sporgsmaal">
+<div *ngIf="questionIndex===5"class="sporgsmaal">
 <p>
   5. Forrest...
 </p>
 <!-- Svar muligheder -->
 </div>
-<div class="radio">
+<div *ngIf="questionIndex===5"class="radio">
 <form >
   <input type="radio" value="1" (click)="setSelected(1)" >
   <label for="wrong">Dump</label><br>
@@ -108,7 +119,10 @@ rigtigt!!!
   <label for="wrong">Run</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Rump</label>
-  <p><button (click)="submit(5)">Next</button></p>
+  <p>
+    <button (click)="submit(5)"> answer</button>
+    <button (click)="next()">Next</button>
+    </p>
 </form>
 </div>
 
