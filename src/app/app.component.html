@@ -1,18 +1,13 @@
 <hello name="{{ name }}"></hello>
 
 <!-- Navne boks (skal gemmes i en variabel der kan kaldes til slut) -->
-<form>
-  <label for="name">Indtast Navn</label><br>
+<form *ngIf="name===''">
+  <label for="name">Indtast dit navn</label><br>
   <!-- ved at bruge "[(ngModel)]" fortæller man at ens variabel, I dette tilfælde "input", lytter til hvad der bliver tastet i inputfeltet. På den måde kan vi fortælle vores logik hvad navnet er på brugeren. Overordnet altså hvordan vi gemmer hvad der er tastet i brugerfladen til vores logik -->
   <input type="text" id="name" [(ngModel)]="input" name="name"><br>
   <button type="button" (click)="SaveName()">Sæt navn</button>
 </form>
-<div *ngIf="correct ===true" >
-rigtigt!!!
-</div>
-<div *ngIf="correct ===false"> 
-  forkert!!!
-</div>
+
 <div *ngIf="questionIndex===1"class="sporgsmaal">
 <p>
   1. The Princess and...
@@ -30,10 +25,15 @@ rigtigt!!!
   <label for="wrong">who cried Wolf</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="right">the Frog</label>
-
+<div *ngIf="correct ===true"class="rigtigt" >
+Rigtigt
+</div>
+<div *ngIf="correct ===false"class="forkert"> 
+  Forkert
+</div>
   <p>
-    <button (click)="submit(1)"> Answer</button>
-    <button (click)="next()">Next</button>
+    <button (click)="submit(1)"> Svar</button>
+    <button (click)="next()">Næste</button>
     </p>
 </form>
 </div>
@@ -53,9 +53,15 @@ rigtigt!!!
   <label for="wrong">Vindication</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Reclamation</label>
-  <p>
-    <button (click)="submit(2)"> answer</button>
-    <button (click)="next()">Next</button>
+  <div *ngIf="correct ===true"class="rigtigt" >
+Rigtigt
+</div>
+<div *ngIf="correct ===false"class="forkert"> 
+  Forkert
+</div>
+ <p>
+    <button (click)="submit(2)"> Svar</button>
+    <button (click)="next()">Næste</button>
     </p>
 </form>
 </div>
@@ -75,9 +81,9 @@ rigtigt!!!
   <label for="wrong">the Beautiful</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="right">the Ugly</label>
-  <p>
-    <button (click)="submit(3)"> answer</button>
-    <button (click)="next()">Next</button>
+ <p>
+    <button (click)="submit(3)"> Svar</button>
+    <button (click)="next()">Næste</button>
     </p>
 </form>
 </div>
@@ -98,8 +104,8 @@ rigtigt!!!
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Bar</label>
   <p>
-    <button (click)="submit(4)"> answer</button>
-    <button (click)="next()">Next</button>
+    <button (click)="submit(4)"> Svar</button>
+    <button (click)="next()">Næste</button>
     </p>
 </form>
 </div>
@@ -120,9 +126,21 @@ rigtigt!!!
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Rump</label>
   <p>
-    <button (click)="submit(5)"> answer</button>
-    <button (click)="next()">Next</button>
+    <button (click)="submit(5)"> Svar</button>
+    <button (click)="next()">Næste</button>
     </p>
 </form>
 </div>
 
+<div *ngIf="questionIndex===6"class="sporgsmaal">
+<p>
+  Tillykke {{ name }}
+</p>
+<!-- Svar muligheder -->
+</div>
+<div *ngIf="questionIndex===6"class="radio">
+<form >
+  <label >Du svarede {{counter}} rigtige</label>
+  
+</form>
+</div>

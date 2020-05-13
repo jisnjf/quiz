@@ -13,6 +13,7 @@ export class AppComponent  {
 questionIndex=1;
 selected=0;
 correct:boolean;
+counter=0;
   SaveName() {
     //Navnet sættes til at være ligemed det som brugeren taster ind i inputfeltet.
     this.name= this.input;
@@ -24,14 +25,12 @@ correct:boolean;
 
 setSelected(select){
   this.selected=select;
-  console.log(this.selected);
 }
 submit(question:number){
 
-console.log(this.answers().indexOf(question));
-
 if(this.selected=== this.answers()[question]) {
 this.correct=true;
+this.counter=this.counter+1;
 }
 else{
   this.correct=false;
