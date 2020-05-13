@@ -30,23 +30,29 @@ p {
 }
 
 .rigtigt {
-  width: 500px;
+  width: auto;
+  padding: 2px;
   position: fixed;
-  right: 455px;
-  bottom: 280px; 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  right: 850px;
+  bottom: 220px; 
+  font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-  color: green;
+  color: rgb(19, 179, 19);
+  background-color:rgba(255, 255, 255, 0.616);
+  border-radius: 6px;
 }
 
 .forkert{
-  width: 500px;
+  width: auto;
+  padding: 2px;
   position: fixed;
-  right: 455px;
-  bottom: 280px; 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  right: 850px;
+  bottom: 220px; 
+  font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-  color: red;
+  color: rgb(218, 21, 21);
+  background-color:rgba(255, 255, 255, 0.616);
+  border-radius: 6px;
 
 }
 
