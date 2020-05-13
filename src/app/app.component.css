@@ -17,16 +17,16 @@ p {
 .radio {
   width: 500px;
   border: 3px solid gray;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
   position: fixed;
-  right: 30%;
-  bottom: 23%; 
+  right: 443px;
+  bottom: 26%; 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 6px;
   margin: auto;
-  background-color: gray;
+  background-color: rgba(158, 183, 190, 0.623);
 }
 
 .rigtigt {
@@ -50,12 +50,47 @@ p {
 
 }
 
+.resultat{
+  width: 500px;
+  border: 3px solid gray;
+  padding: 20px;
+  text-align: left;
+  position: fixed;
+  right: 30%;
+  bottom: 55%; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  border-radius: 6px;
+  margin: auto;
+  background-color: rgba(190, 190, 190, 0.479);
+}
+
 h1{
   color: red;
 }
 
+.svar{
+ margin: 20px 21px;
+  padding: 10px;
+  position: fixed;
+  right: 667px;
+  bottom: 195px; 
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.103);
+}
+
+.næste{
+  margin: 20px 21px;
+  padding: 10px;
+  position: fixed;
+  right: 455px;
+  bottom: 195px; 
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.158);
+}
+
 input[type=radio] {
-  margin: 6px 10px;
+  margin: 20px 21px;
   padding: 20%;
 }
 

@@ -32,8 +32,8 @@ Rigtigt
   Forkert
 </div>
   <p>
-    <button (click)="submit(1)"> Svar</button>
-    <button (click)="next()">Næste</button>
+    <button  class="svar"(click)="submit(1)"> Svar</button>
+    <button class="næste" (click)="next()">></button>
     </p>
 </form>
 </div>
@@ -59,9 +59,9 @@ Rigtigt
 <div *ngIf="correct ===false"class="forkert"> 
   Forkert
 </div>
- <p>
-    <button (click)="submit(2)"> Svar</button>
-    <button (click)="next()">Næste</button>
+  <p>
+    <button  class="svar"(click)="submit(1)"> Svar</button>
+    <button class="næste" (click)="next()">></button>
     </p>
 </form>
 </div>
@@ -81,9 +81,15 @@ Rigtigt
   <label for="wrong">the Beautiful</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="right">the Ugly</label>
- <p>
-    <button (click)="submit(3)"> Svar</button>
-    <button (click)="next()">Næste</button>
+  <div *ngIf="correct ===true"class="rigtigt" >
+Rigtigt
+</div>
+<div *ngIf="correct ===false"class="forkert"> 
+  Forkert
+</div>
+  <p>
+    <button  class="svar"(click)="submit(1)"> Svar</button>
+    <button class="næste" (click)="next()">></button>
     </p>
 </form>
 </div>
@@ -103,9 +109,15 @@ Rigtigt
   <label for="right">Club</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Bar</label>
+  <div *ngIf="correct ===true"class="rigtigt" >
+Rigtigt
+</div>
+<div *ngIf="correct ===false"class="forkert"> 
+  Forkert
+</div>
   <p>
-    <button (click)="submit(4)"> Svar</button>
-    <button (click)="next()">Næste</button>
+    <button  class="svar"(click)="submit(1)"> Svar</button>
+    <button class="næste" (click)="next()">></button>
     </p>
 </form>
 </div>
@@ -125,9 +137,15 @@ Rigtigt
   <label for="wrong">Run</label><br>
   <input type="radio" value="4"(click)="setSelected(4)">
   <label for="wrong">Rump</label>
+  <div *ngIf="correct ===true"class="rigtigt" >
+Rigtigt
+</div>
+<div *ngIf="correct ===false"class="forkert"> 
+  Forkert
+</div>
   <p>
-    <button (click)="submit(5)"> Svar</button>
-    <button (click)="next()">Næste</button>
+    <button  class="svar"(click)="submit(1)"> Svar</button>
+    <button class="næste" (click)="next()">></button>
     </p>
 </form>
 </div>
@@ -138,9 +156,9 @@ Rigtigt
 </p>
 <!-- Svar muligheder -->
 </div>
-<div *ngIf="questionIndex===6"class="radio">
+<div *ngIf="questionIndex===6"class="resultat">
 <form >
-  <label >Du svarede {{counter}} rigtige</label>
+  <label >Ud af 5 svarede du {{counter}} rigtige</label>
   
 </form>
 </div>
